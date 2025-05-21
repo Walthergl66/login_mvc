@@ -6,15 +6,14 @@ use PDOException;
 
 class Database {
     private $host = 'localhost';
-    private $port = '5432'; // Puerto por defecto de PostgreSQL
+    private $port = '5432'; 
     private $db   = 'login_mvc';
-    private $user = 'postgres'; // Cambia si tu usuario es diferente
-    private $pass = 'Hola'; // Añade tu contraseña si la tienes
+    private $user = 'postgres';
+    private $pass = 'Hola'; 
     private $charset = 'utf8';
     private $pdo;
 
     public function __construct() {
-        // DSN para PostgreSQL
         $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->db}";
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

@@ -28,11 +28,11 @@ class UserController {
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $result = $this->userModel->create($username, $email, $password);
                 if ($result === true) {
-                    $message = "Registration successful.";
+                    $message = "✅Registro Exitoso.";
                 } elseif ($result === 'duplicate') {
                     $message = "Username or email already exists.";
                 } else {
-                    $message = "Registration error.";
+                    $message = "❌ Error de registro.";
                 }
             } else {
                 $message = "Invalid email format.";

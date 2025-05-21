@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     valid = false;
                     input.style.borderColor = "red";
                 } else {
-                    input.style.borderColor = "";
+                    input.style.borderColor = "greed";
                 }
             });
             if (!valid) {
